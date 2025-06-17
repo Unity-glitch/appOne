@@ -39,16 +39,13 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: "bold",
     textAlign: "center",
-    backgroundColor: 'rgba(0,0,0, 0.5)',
-    height: '100%',
     padding: 50
   },
   link: {
     color: "white",
-    fontSize: 25,
+    fontSize: 18,
     fontWeight: "bold",
-    textDecorationLine: 'underline',
-    textAlign: "center",
-    padding: 0
+    textAlign: "left",
+    padding: 10
   },
 });
