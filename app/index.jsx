@@ -1,10 +1,16 @@
-import { View, Text, StyleSheet, ImageBackground } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+  Pressable,
+  // ImageIcon,
+} from "react-native";
 import { Link } from "expo-router";
 
 import React from "react";
+// import coffeeIcon from "@/assets/images/coffee.png";
 import coffeeImage from "@/assets/images/coffee2.jpg";
-
-
 
 const App = () => {
   return (
@@ -14,8 +20,18 @@ const App = () => {
         resizeMode="cover"
         style={styles.image}
       >
-        <Text style={styles.title}>Coffee Shop</Text>
-        <Link href="/explore" style={styles.link}>Explore</Link>
+        {/* <ImageIcon resizeMode="cover" source={coffeeIcon}></ImageIcon> */}
+        <Text style={styles.title}>CS</Text>
+        <Link href="/contact" style={styles.link} asChild>
+          <Pressable>
+            <Text style={styles.link}>Contact Us</Text>
+          </Pressable>
+        </Link>
+        <Link href="/menu" style={styles.link} asChild>
+          <Pressable>
+            <Text style={styles.link}>Menu</Text>
+          </Pressable>
+        </Link>
       </ImageBackground>
     </View>
   );
@@ -37,15 +53,12 @@ const styles = StyleSheet.create({
   title: {
     color: "white",
     fontSize: 25,
-    fontWeight: "bold",
-    textAlign: "center",
-    padding: 50
+    textAlign: "left",
+    paddingTop: 55,
+    paddingLeft: 30
   },
   link: {
     color: "white",
     fontSize: 18,
-    fontWeight: "bold",
-    textAlign: "left",
-    padding: 10
   },
 });
