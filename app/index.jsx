@@ -21,7 +21,7 @@ const App = () => {
         style={styles.image}
       >
         {/* <ImageIcon resizeMode="cover" source={coffeeIcon}></ImageIcon> */}
-        <Text style={styles.title}>CS</Text>
+        <Text style={styles.title}>Coffee Shop</Text>
         <Link href="/contact" style={styles.link} asChild>
           <Pressable>
             <Text style={styles.link}>Contact Us</Text>
@@ -60,5 +60,7 @@ const styles = StyleSheet.create({
   link: {
     color: "white",
     fontSize: 18,
+    paddingLeft: 15,
+    paddingTop: 8
   },
 });

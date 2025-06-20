@@ -41,8 +41,8 @@ export default function MenuScreen() {
         renderItem={({ item }) => (
           <View style={styles.row}>
             <View style={styles.menuTextRow}>
-              <Text style={[styles.menuItemText, styles.menueItemTitle]}>{item.id}</Text>
-              <Text style={styles.menuItemText}>{item.title}</Text>
+              <Text style={[styles.menuItemText, styles.menueItemTitle]}>{item.title}</Text>
+              <Text style={styles.menuItemText}>{item.description}</Text>
             </View>
             <Image style={styles.menuImage} source={MENU_IMAGES[item.id - 1]} />
           </View>
