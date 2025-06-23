@@ -3,5 +3,7 @@
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit",
     "source.sortMembers": "explicit"
-  }
+  },
+  "mobile-preview.device": "iPhone 15 Pro Max",
+  "mobile-preview.url": "http://localhost:8081"
 }

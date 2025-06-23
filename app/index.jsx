@@ -4,13 +4,12 @@ import {
   StyleSheet,
   ImageBackground,
   Pressable,
-  // ImageIcon,
+  TouchableOpacity,
 } from "react-native";
 import { Link } from "expo-router";
 
 import React from "react";
-// import coffeeIcon from "@/assets/images/coffee.png";
-import coffeeImage from "@/assets/images/coffee2.jpg";
+import coffeeImage from "@/assets/images/coffee3.jpg";
 
 const App = () => {
   return (
@@ -20,18 +19,35 @@ const App = () => {
         resizeMode="cover"
         style={styles.image}
       >
-        {/* <ImageIcon resizeMode="cover" source={coffeeIcon}></ImageIcon> */}
-        <Text style={styles.title}>Coffee Shop</Text>
-        <Link href="/contact" style={styles.link} asChild>
-          <Pressable>
-            <Text style={styles.link}>Contact Us</Text>
-          </Pressable>
-        </Link>
-        <Link href="/menu" style={styles.link} asChild>
+        <View style={styles.heroSection}>
+          <Text style={styles.title}>
+            Fall in Love with Coffee in Blissful Delight!
+          </Text>
+          <Text style={styles.subTitle}>
+            Welcome to our cozy coffee corner, where every cup is delightful for
+            you.
+          </Text>
+          <Link href="/login" asChild>
+            <Pressable>
+              <Text style={styles.buttonGetStarted}>Get Started</Text>
+            </Pressable>
+          </Link>
+        </View>
+        {/* <View style={styles.imageLogoWrapper}>
+          <Image style={styles.imageLogo} source={logoCoffee}></Image>
+          <Text style={styles.title}>Caféza</Text>
+        </View> */}
+        <TouchableOpacity></TouchableOpacity>
+        {/* <Link href="/menu" style={styles.link} asChild>
           <Pressable>
             <Text style={styles.link}>Menu</Text>
           </Pressable>
         </Link>
+        <Link href="/contact" style={styles.link} asChild>
+          <Pressable>
+            <Text style={styles.link}>Contact Us</Text>
+          </Pressable>
+        </Link> */}
       </ImageBackground>
     </View>
   );
@@ -43,24 +59,67 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
+    backgroundColor: "black",
   },
   image: {
     width: "100%",
-    height: "100%",
+    height: "60%",
     flex: 1,
     resizeMode: "cover",
   },
+  heroSection: {
+    display: "flex",
+    flexDirection: "column",
+    rowGap: "15px",
+    height: "100vh",
+    justifyContent: "center",
+    marginTop: "145px",
+    padding: "15px",
+  },
   title: {
     color: "white",
-    fontSize: 25,
-    textAlign: "left",
-    paddingTop: 55,
-    paddingLeft: 30
+    fontSize: 24,
+    letterSpacing: 1,
+    fontWeight: "bold",
+    fontFamily: "Consolas",
+    textAlign: "center",
+    lineHeight: 28
+  },
+  subTitle: {
+    color: "white",
+    fontSize: 14,
+    textAlign: "center",
+    fontFamily: 'Consolas',
+    lineHeight: 22
+    
+  },
+  buttonGetStarted: {
+    color: "white",
+    backgroundColor: "#B5651D",
+    width: "160px",
+    paddingVertical: 10,
+    textAlign: "center",
+    borderRadius: "20px",
+    marginHorizontal: "auto",
+    letterSpacing: 1,
+    fontSize: "14px",
+    fontFamily: 'Open Sans'
   },
   link: {
     color: "white",
-    fontSize: 18,
-    paddingLeft: 15,
-    paddingTop: 8
+    fontSize: 12,
+    paddingLeft: 10,
+    paddingTop: 8,
+    letterSpacing: 1,
+  },
+  imageLogo: {
+    width: 50,
+    height: 50,
+    resizeMode: "contain",
+  },
+  imageLogoWrapper: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingTop: 35,
   },
 });

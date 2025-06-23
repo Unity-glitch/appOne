@@ -31,20 +31,21 @@ export default function RootLayout() {
         name="index"
         options={{ headerShown: false, title: "Home" }}
       />
-      <Stack.Screen 
-        name="menu"
-        options={{
-          headerShown: true,
-          title: "Menu",
-          headerTitle: "Coffee Menu",
-        }}
-      />
+      <Stack.Screen name="logn" options={{headerShown: false, title: 'Yes'}}/>
       <Stack.Screen
         name="contact"
         options={{
           headerShown: true,
           title: "Contact",
           headerTitle: "Contact Us",
+        }}
+      />
+      <Stack.Screen 
+        name="menu"
+        options={{
+          headerShown: true,
+          title: "Menu",
+          headerTitle: "Coffee Menu",
         }}
       />
       {/* <Stack.Screen name="(coffee)" options={{ headerShown: false }} /> */}
