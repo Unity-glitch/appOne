@@ -2,7 +2,8 @@
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { Appearance, StyleSheet } from 'react-native';
+import { Appearance, StyleSheet } from "react-native";
+// import { Image } from "react-native";
 import { Colors } from "@/constants/Colors";
 // import 'react-native-reanimated';
 // import { useColorScheme } from '@/hooks/useColorScheme';
@@ -31,7 +32,15 @@ export default function RootLayout() {
         name="index"
         options={{ headerShown: false, title: "Home" }}
       />
-      <Stack.Screen name="logn" options={{headerShown: false, title: 'Yes'}}/>
+      <Stack.Screen
+        name="login"
+        options={{
+          title: "Login",
+          headerTitleAlign: 'center',
+          headerStyle: { backgroundColor: "white"},
+          headerTintColor: 'black'
+        }}
+      />
       <Stack.Screen
         name="contact"
         options={{
@@ -40,7 +49,7 @@ export default function RootLayout() {
           headerTitle: "Contact Us",
         }}
       />
-      <Stack.Screen 
+      <Stack.Screen
         name="menu"
         options={{
           headerShown: true,

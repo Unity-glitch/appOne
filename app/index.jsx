@@ -33,10 +33,6 @@ const App = () => {
             </Pressable>
           </Link>
         </View>
-        {/* <View style={styles.imageLogoWrapper}>
-          <Image style={styles.imageLogo} source={logoCoffee}></Image>
-          <Text style={styles.title}>Caféza</Text>
-        </View> */}
         <TouchableOpacity></TouchableOpacity>
         {/* <Link href="/menu" style={styles.link} asChild>
           <Pressable>
@@ -70,11 +66,11 @@ const styles = StyleSheet.create({
   heroSection: {
     display: "flex",
     flexDirection: "column",
-    rowGap: "15px",
-    height: "100vh",
+    rowGap: 15,
+    height: '100%',
     justifyContent: "center",
-    marginTop: "145px",
-    padding: "15px",
+    marginTop: 145,
+    padding: 15,
   },
   title: {
     color: "white",
@@ -96,13 +92,13 @@ const styles = StyleSheet.create({
   buttonGetStarted: {
     color: "white",
     backgroundColor: "#B5651D",
-    width: "160px",
+    width: 160,
     paddingVertical: 10,
     textAlign: "center",
-    borderRadius: "20px",
+    borderRadius: 20,
     marginHorizontal: "auto",
     letterSpacing: 1,
-    fontSize: "14px",
+    fontSize: 14,
     fontFamily: 'Open Sans'
   },
   link: {
