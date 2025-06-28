@@ -38,10 +38,18 @@ export default function RootLayout() {
           title: "Login",
           headerTitleAlign: 'center',
           headerStyle: { backgroundColor: "white"},
+          headerTitleStyle: {fontSize: 18},
           headerTintColor: 'black'
         }}
       />
-      <Stack.Screen
+      <Stack.Screen name="signup" options={{
+        title: 'Register',
+        headerTitleAlign: 'center',
+        headerStyle: {backgroundColor: 'white'},
+        headerTintColor: 'black',
+        headerTitleStyle: {fontSize: 18}
+      }}/>
+      {/* <Stack.Screen
         name="contact"
         options={{
           headerShown: true,
@@ -56,7 +64,7 @@ export default function RootLayout() {
           title: "Menu",
           headerTitle: "Coffee Menu",
         }}
-      />
+      /> */}
       {/* <Stack.Screen name="(coffee)" options={{ headerShown: false }} /> */}
       {/* <Stack.Screen name='index' options={{title: "Home", headerShown: false}} />
         <Stack.Screen name='contact' options={{title: "Contact"}} /> */}

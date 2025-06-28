@@ -1,15 +1,16 @@
-import { useState } from "react";
-import React from "react";
+import bgImage from "@/assets/images/coffee9.jpg";
+import { Link } from "expo-router";
+import React, { useState } from "react";
 import {
+  ImageBackground,
+  Pressable,
   StyleSheet,
+  Text,
   TextInput,
   TouchableOpacity,
   View,
-  Text,
-  ImageBackground,
 } from "react-native";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-import bgImage from '@/assets/images/coffee9.jpg';
 
 export default function LoginPage() {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -50,9 +51,13 @@ export default function LoginPage() {
         </View>
         <View style={styles.bottomHeader}>
           <Text style={styles.fadedtext}>New member?</Text>
-          <Text style={styles.signUpBtn}>Sign up</Text>
+          <Link href="/signup" asChild>
+            <Pressable>
+              <Text style={styles.signUpBtn}>Sign up</Text>
+            </Pressable>
+          </Link>
         </View>
-      <ImageBackground source={bgImage} style={styles.bgImageBottom}/>
+        <ImageBackground source={bgImage} style={styles.bgImageBottom} />
       </View>
     </View>
   );
@@ -69,21 +74,21 @@ const styles = StyleSheet.create({
     rowGap: 55,
     height: "100vh",
     justifyContent: "center",
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderTopLeftRadius: 20,
-    borderTopRightRadius: 12
+    borderTopRightRadius: 12,
   },
-  bgImageBottom:{
-    backgroundSize: 'cover',
-    width: '100%',
-    height: '45vh',
+  bgImageBottom: {
+    backgroundSize: "cover",
+    width: "100%",
+    height: "45vh",
   },
   title: {
     color: "white",
-    fontSize: 28,
+    fontSize: 24,
     color: "black",
     fontFamily: "consolas",
-    textAlign: 'center'
+    textAlign: "center",
   },
   inputText: {
     color: "black",
@@ -108,7 +113,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     rowGap: 30,
     marginHorizontal: "auto",
-    marginTop: 50
+    marginTop: 50,
   },
   bottomHeader: {
     flexDirection: "row",
@@ -121,13 +126,13 @@ const styles = StyleSheet.create({
     rowGap: 25,
   },
   forgotPwrdText: {
-    color: "#B5651D",
+    color: "rgb(89, 44, 0)",
     textDecorationLine: "underline",
     fontSize: 14,
     letterSpacing: 1,
   },
   loginBtn: {
-    backgroundColor: "#B5651D",
+    backgroundColor: "rgb(89, 44, 0)",
     width: 120,
     textAlign: "center",
     paddingVertical: 8,
