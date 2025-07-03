@@ -8,6 +8,7 @@ import {
   TextInput,
   TouchableOpacity,
   Button,
+  Pressable,
 } from "react-native";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import { Link } from "expo-router";
@@ -19,7 +20,7 @@ export default function Signup() {
   const [passwordVisible, setPasswordVisible] = useState(false);
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to Starbucks</Text>
+      <Text style={styles.title}>Starbucks</Text>
       <View style={styles.formWrapper}>
         <View style={styles.inputWrapper}>
           <MaterialIcons name="mail-outline" size={20} color="black" />
@@ -59,14 +60,22 @@ export default function Signup() {
             />
           </TouchableOpacity>
         </View>
-        <Text style={styles.register}>Register</Text>
-        <Text style={styles.forgotPassword}>Forgot Password?</Text>
+        <Text style={styles.register}>Sign up</Text>
       </View>
+      <Text style={styles.orText}>OR</Text>
       <View style={styles.btnWrapper}>
         <View>
           <ImageBackground source={googleIcon} style={styles.googleIcon} />
         </View>
         <Text style={styles.btn2}>Connect with Google</Text>
+      </View>
+      <View style={styles.loginWrapper}>
+        <Text style={styles.subText}>Alreaady have an account?</Text>
+        <Link href="/login" asChild>
+          <Pressable>
+            <Text style={styles.loginText}>Login</Text>
+          </Pressable>
+        </Link>
       </View>
       <ImageBackground source={topImage} style={styles.topImage} />
     </View>
@@ -79,7 +88,7 @@ const styles = StyleSheet.create({
   },
   topImage: {
     width: "100%",
-    height: "20vh",
+    height: "34vh",
     resizeMode: "contain",
     borderRadius: 20,
   },
@@ -105,14 +114,15 @@ const styles = StyleSheet.create({
     columnGap: 10,
     alignItems: "center",
     borderBottomWidth: 1,
-    width: 280,
+    width: 250,
     borderColor: "rgba(0,0,0,0.3)",
     paddingHorizontal: 10,
   },
   formWrapper: {
     flexDirection: "column",
     rowGap: 25,
-    marginTop: 12
+    marginTop: 12,
+    margin: "auto",
   },
   register: {
     backgroundColor: "rgb(89, 44, 0)",
@@ -123,19 +133,53 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginHorizontal: "auto",
     fontSize: 14,
-  },
-  btn2: {
-    // color: 'white'
+    letterSpacing: 1,
   },
   forgotPassword: {
-    color: 'rgb(175, 0, 0)'
+    color: "rgb(175, 0, 0)",
+    paddingLeft: 20,
   },
   googleIcon: {
     width: 20,
     height: 20,
     resizeMode: "cover",
   },
+  btn2: {
+    fontSize: 13,
+    letterSpacing: 1,
+  },
   btnWrapper: {
     flexDirection: "row",
+    columnGap: 5,
+    justifyContent: "center",
+    backgroundColor: "#D3D3E3",
+    width: 250,
+    padding: 10,
+    color: "white",
+    textAlign: "center",
+    borderRadius: 20,
+    marginHorizontal: "auto",
+    marginVertical: 10,
+    fontSize: 14,
+  },
+  orText: {
+    fontSize: 13,
+    textAlign: "center",
+    paddingTop: 12,
+  },
+  loginWrapper: {
+    flexDirection: "row",
+    columnGap: 2,
+    justifyContent: "center",
+    marginVertical: 12,
+  },
+  subText: {
+    fontSize: 13,
+    letterSpacing: 1,
+  },
+  loginText: {
+    fontSize: 14,
+    letterSpacing: 1,
+    color: "rgb(89, 44, 0)",
   },
 });

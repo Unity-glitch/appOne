@@ -18,7 +18,7 @@ export default function LoginPage() {
     <View style={styles.container}>
       <View style={styles.containerWrapper}>
         <View style={styles.topHeader}>
-          <Text style={styles.title}>Welcome back</Text>
+          <Text style={styles.title}>Starbucks</Text>
           <View style={styles.formWrapper}>
             <View style={styles.inputWrapper}>
               <MaterialIcons name="mail-outline" size={20} color="black" />
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   containerWrapper: {
     flexDirection: "column",
-    rowGap: 55,
+    rowGap: 60,
     height: "100vh",
     justifyContent: "center",
     backgroundColor: "white",
@@ -105,9 +105,10 @@ const styles = StyleSheet.create({
     columnGap: 10,
     alignItems: "center",
     borderBottomWidth: 1,
-    width: 280,
+    width: 250,
     borderColor: "rgba(0,0,0,0.3)",
     paddingHorizontal: 10,
+    margin: 'auto'
   },
   topHeader: {
     flexDirection: "column",
@@ -117,7 +118,7 @@ const styles = StyleSheet.create({
   },
   bottomHeader: {
     flexDirection: "row",
-    columnGap: 3,
+    columnGap: 5,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -133,13 +134,13 @@ const styles = StyleSheet.create({
   },
   loginBtn: {
     backgroundColor: "rgb(89, 44, 0)",
-    width: 120,
+    width: 110,
     textAlign: "center",
     paddingVertical: 8,
     color: "white",
     fontSize: 14,
     borderRadius: 6,
-    letterSpacing: 1,
+    letterSpacing: 1
   },
   signUpBtn: {
     color: "#B5651D",
@@ -153,7 +154,7 @@ const styles = StyleSheet.create({
   loginWrapper: {
     flexDirection: "row",
     alignItems: "center",
-    width: 280,
+    width: 250,
     justifyContent: "space-between",
   },
 });
