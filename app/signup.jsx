@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
   },
   loginWrapper: {
     flexDirection: "row",
-    columnGap: 2,
+    columnGap: 5,
     justifyContent: "center",
     marginVertical: 12,
   },

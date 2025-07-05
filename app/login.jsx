@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   containerWrapper: {
     flexDirection: "column",
-    rowGap: 60,
+    rowGap: 80,
     height: "100vh",
     justifyContent: "center",
     backgroundColor: "white",
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: "white",
-    fontSize: 24,
+    fontSize: 22,
     color: "black",
     fontFamily: "consolas",
     textAlign: "center",

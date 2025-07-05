@@ -1,15 +1,15 @@
+import { Link } from "expo-router";
 import {
-  View,
-  Text,
-  StyleSheet,
   ImageBackground,
   Pressable,
+  StyleSheet,
+  Text,
   TouchableOpacity,
+  View,
 } from "react-native";
-import { Link } from "expo-router";
 
-import React from "react";
 import coffeeImage from "@/assets/images/coffee3.jpg";
+import React from "react";
 
 const App = () => {
   return (
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   buttonGetStarted: {
     color: "white",
-    backgroundColor: 'rgb(89, 44, 0)',
+    backgroundColor: 'rgb(140, 70, 0)',
     width: 160,
     paddingVertical: 10,
     textAlign: "center",
