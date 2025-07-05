@@ -1,19 +1,17 @@
-import React from "react";
-import { useState } from "react";
+import { Link } from "expo-router";
+import React, { useState } from "react";
 import {
-  StyleSheet,
-  View,
-  Text,
   ImageBackground,
+  Pressable,
+  StyleSheet,
+  Text,
   TextInput,
   TouchableOpacity,
-  Button,
-  Pressable,
+  View
 } from "react-native";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-import { Link } from "expo-router";
 
-import topImage from "@/assets/images/coffee5.jpg";
+import bottomImage from "@/assets/images/coffee5.jpg";
 import googleIcon from "@/assets/images/googleIcon.png";
 
 export default function Signup() {
@@ -77,7 +75,7 @@ export default function Signup() {
           </Pressable>
         </Link>
       </View>
-      <ImageBackground source={topImage} style={styles.topImage} />
+      <ImageBackground source={bottomImage} style={styles.bottomImage} />
     </View>
   );
 }
@@ -86,14 +84,14 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
   },
-  topImage: {
+  bottomImage: {
     width: "100%",
-    height: "34vh",
+    height: "35vh",
     resizeMode: "contain",
     borderRadius: 20,
   },
   title: {
-    fontSize: "22px",
+    fontSize: "20px",
     textAlign: "center",
     fontFamily: "arial",
     paddingVertical: "12px",
@@ -176,6 +174,7 @@ const styles = StyleSheet.create({
   subText: {
     fontSize: 13,
     letterSpacing: 1,
+    color: 'rgba(0,0,0,0.6)'
   },
   loginText: {
     fontSize: 14,
