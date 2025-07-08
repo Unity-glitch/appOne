@@ -65,7 +65,11 @@ export default function Signup() {
         <View>
           <ImageBackground source={googleIcon} style={styles.googleIcon} />
         </View>
-        <Text style={styles.btn2}>Connect with Google</Text>
+        <Link href="" asChild>
+          <Pressable>
+            <Text style={styles.btn2}>Connect with Google</Text>
+          </Pressable>
+        </Link>
       </View>
       <View style={styles.loginWrapper}>
         <Text style={styles.subText}>Alreaady have an account?</Text>

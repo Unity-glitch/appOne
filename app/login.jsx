@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   containerWrapper: {
     flexDirection: "column",
-    rowGap: 80,
+    rowGap: 70,
     height: "100vh",
     justifyContent: "center",
     backgroundColor: "white",

@@ -27,7 +27,7 @@ const App = () => {
             Welcome to our cozy coffee corner, where every cup is delightful for
             you.
           </Text>
-          <Link href="/login" asChild>
+          <Link href="/signup" asChild>
             <Pressable>
               <Text style={styles.buttonGetStarted}>Get Started</Text>
             </Pressable>
