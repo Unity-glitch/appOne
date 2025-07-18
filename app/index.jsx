@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     width: 160,
     paddingVertical: 10,
     textAlign: "center",
-    borderRadius: 20,
+    borderRadius: 6,
     marginHorizontal: "auto",
     letterSpacing: 1,
     fontSize: 14,

@@ -21,6 +21,10 @@ export default function Signup() {
       <Text style={styles.title}>Starbucks</Text>
       <View style={styles.formWrapper}>
         <View style={styles.inputWrapper}>
+          <MaterialIcons name="person-outline" size={20} color="black" />
+          <TextInput placeholder="Full Name" style={styles.inputText} />
+        </View>
+        <View style={styles.inputWrapper}>
           <MaterialIcons name="mail-outline" size={20} color="black" />
           <TextInput placeholder="Email Address" style={styles.inputText} />
         </View>
@@ -58,9 +62,8 @@ export default function Signup() {
             />
           </TouchableOpacity>
         </View>
-        <Text style={styles.register}>Sign up</Text>
+        <Text style={styles.register}>Register</Text>
       </View>
-      <Text style={styles.orText}>OR</Text>
       <View style={styles.btnWrapper}>
         <View>
           <ImageBackground source={googleIcon} style={styles.googleIcon} />
@@ -90,7 +93,7 @@ const styles = StyleSheet.create({
   },
   bottomImage: {
     width: "100%",
-    height: "35vh",
+    height: "25vh",
     resizeMode: "contain",
     borderRadius: 20,
   },
@@ -132,10 +135,11 @@ const styles = StyleSheet.create({
     padding: 10,
     color: "white",
     textAlign: "center",
-    borderRadius: 20,
+    borderRadius: 6,
     marginHorizontal: "auto",
     fontSize: 14,
     letterSpacing: 1,
+    cursor: "pointer",
   },
   forgotPassword: {
     color: "rgb(175, 0, 0)",
@@ -159,21 +163,19 @@ const styles = StyleSheet.create({
     padding: 10,
     color: "white",
     textAlign: "center",
-    borderRadius: 20,
+    borderRadius: 6,
     marginHorizontal: "auto",
     marginVertical: 10,
     fontSize: 14,
-  },
-  orText: {
-    fontSize: 13,
-    textAlign: "center",
-    paddingTop: 12,
+    cursor: "pointer",
   },
   loginWrapper: {
-    flexDirection: "row",
-    columnGap: 5,
+    flexDirection: "column",
+    rowGap: 5,
     justifyContent: "center",
-    marginVertical: 12,
+    marginHorizontal: "auto",
+    width: 250,
+    // marginVertical: 12,
   },
   subText: {
     fontSize: 13,
@@ -181,8 +183,13 @@ const styles = StyleSheet.create({
     color: 'rgba(0,0,0,0.6)'
   },
   loginText: {
+    backgroundColor: "rgb(89, 44, 0)",
+    width: 250,
+    textAlign: "center",
+    paddingVertical: 8,
+    color: "white",
     fontSize: 14,
+    borderRadius: 6,
     letterSpacing: 1,
-    color: "rgb(89, 44, 0)",
   },
 });
