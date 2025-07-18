@@ -175,7 +175,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginHorizontal: "auto",
     width: 250,
-    // marginVertical: 12,
   },
   subText: {
     fontSize: 13,
