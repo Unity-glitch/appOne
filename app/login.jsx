@@ -45,7 +45,11 @@ export default function LoginPage() {
           <View style={styles.loginWrapper}>
             <Text style={styles.forgotPwrdText}>Forgot Password?</Text>
             <View>
-              <Text style={styles.loginBtn}>Login</Text>
+              <Link href="/onboarding1" asChild>
+                <Pressable>
+                  <Text style={styles.loginBtn}>Login</Text>
+                </Pressable>
+              </Link>
             </View>
           </View>
         </View>

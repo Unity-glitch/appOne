@@ -2,7 +2,7 @@
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { Appearance, StyleSheet } from "react-native";
+import { Appearance } from "react-native";
 // import { Image } from "react-native";
 import { Colors } from "@/constants/Colors";
 // import 'react-native-reanimated';
@@ -48,6 +48,13 @@ export default function RootLayout() {
         headerStyle: {backgroundColor: 'white'},
         headerTintColor: 'black',
         headerTitleStyle: {fontSize: 18}
+      }}/>
+      <Stack.Screen name="onboarding1" options={{
+        title: "",
+        headerStyle: {backgroundColor: 'white'},
+        headerTintColor: 'black',
+        headerTitleStyle: {fontSize: 18}
+        
       }}/>
       {/* <Stack.Screen
         name="contact"
