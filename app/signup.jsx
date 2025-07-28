@@ -7,7 +7,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 
@@ -62,7 +62,11 @@ export default function Signup() {
             />
           </TouchableOpacity>
         </View>
-        <Text style={styles.register}>Register</Text>
+        <Link href="/onboarding1" asChild>
+          <Pressable>
+            <Text style={styles.register}>Register</Text>
+          </Pressable>
+        </Link>
       </View>
       <View style={styles.btnWrapper}>
         <View>
@@ -93,7 +97,7 @@ const styles = StyleSheet.create({
   },
   bottomImage: {
     width: "100%",
-    height: "25vh",
+    height: "30vh",
     resizeMode: "contain",
     borderRadius: 20,
   },
@@ -179,7 +183,7 @@ const styles = StyleSheet.create({
   subText: {
     fontSize: 13,
     letterSpacing: 1,
-    color: 'rgba(0,0,0,0.6)'
+    color: "rgba(0,0,0,0.6)",
   },
   loginText: {
     backgroundColor: "rgb(89, 44, 0)",
