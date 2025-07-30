@@ -36,26 +36,40 @@ export default function RootLayout() {
         name="login"
         options={{
           title: "Login",
-          headerTitleAlign: 'center',
-          headerStyle: { backgroundColor: "white"},
-          headerTitleStyle: {fontSize: 18},
-          headerTintColor: 'black'
+          headerTitleAlign: "center",
+          headerStyle: { backgroundColor: "white" },
+          headerTitleStyle: { fontSize: 18 },
+          headerTintColor: "black",
         }}
       />
-      <Stack.Screen name="signup" options={{
-        title: 'Register',
-        headerTitleAlign: 'center',
-        headerStyle: {backgroundColor: 'white'},
-        headerTintColor: 'black',
-        headerTitleStyle: {fontSize: 18}
-      }}/>
-      <Stack.Screen name="onboarding1" options={{
-        title: "",
-        headerStyle: {backgroundColor: 'white'},
-        headerTintColor: 'black',
-        headerTitleStyle: {fontSize: 18}
-        
-      }}/>
+      <Stack.Screen
+        name="signup"
+        options={{
+          title: "Register",
+          headerTitleAlign: "center",
+          headerStyle: { backgroundColor: "white" },
+          headerTintColor: "black",
+          headerTitleStyle: { fontSize: 18 },
+        }}
+      />
+      <Stack.Screen
+        name="onboarding1"
+        options={{
+          title: "",
+          headerStyle: { backgroundColor: "white" },
+          headerTintColor: "black",
+          headerTitleStyle: { fontSize: 18 },
+        }}
+      />
+      <Stack.Screen
+        name="onboarding2"
+        options={{
+          title: "",
+          headerStyle: { backgroundColor: "white" },
+          headerTintColor: "black",
+          headerTitleStyle: { fontSize: 18 },
+        }}
+      />
       {/* <Stack.Screen
         name="contact"
         options={{

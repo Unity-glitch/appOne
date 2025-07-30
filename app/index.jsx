@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     rowGap: 15,
-    height: '100%',
+    height: "100%",
     justifyContent: "center",
     marginTop: 145,
     padding: 15,
@@ -79,19 +79,18 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontFamily: "Consolas",
     textAlign: "center",
-    lineHeight: 28
+    lineHeight: 28,
   },
   subTitle: {
     color: "white",
     fontSize: 14,
     textAlign: "center",
-    fontFamily: 'Consolas',
-    lineHeight: 22
-    
+    fontFamily: "Consolas",
+    lineHeight: 22,
   },
   buttonGetStarted: {
     color: "white",
-    backgroundColor: 'rgb(140, 70, 0)',
+    backgroundColor: "rgb(140, 70, 0)",
     width: 160,
     paddingVertical: 10,
     textAlign: "center",
@@ -99,7 +98,7 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
     letterSpacing: 1,
     fontSize: 14,
-    fontFamily: 'Open Sans'
+    fontFamily: "Open Sans",
   },
   link: {
     color: "white",
