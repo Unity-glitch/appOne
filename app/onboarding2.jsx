@@ -1,8 +1,8 @@
 import React from "react";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 import { Link } from "expo-router";
-import coffee8 from "../assets/images/coffee66.png";
+import coffee8 from "../assets/images/coffee6b.png";
 
 export default function Onboarding2Page() {
   return (

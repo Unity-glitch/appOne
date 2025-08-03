@@ -1,14 +1,52 @@
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { Link } from "expo-router";
-import React from "react";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import coffee8 from "../assets/images/coffee66.png";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  Dimensions,
+  FlatList,
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+import image1 from "../assets/images/coffee5b.png";
+import image2 from "../assets/images/coffee6b.png";
+import image3 from "../assets/images/coffee8.png";
 
 export default function OnboardingPage() {
+  const FlatListRef = useRef(null);
+  const images = [image1, image2, image3];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const nextIndex = (currentIndex + 1) % images.length;
+      FlatListRef.current?.scrollToIndex({ index: nextIndex, animated: true });
+      setCurrentIndex(nextIndex);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={coffee8}></Image>
       <View style={styles.wrapper}>
+        <FlatList
+          data={images}
+          ref={FlatListRef}
+          horizontal
+          pagingEnabled
+          keyExtractor={(_, index) => index.toString()}
+          showsHorizontalScrollIndicator={false}
+          renderItem={({ item }) => (
+            <Image style={styles.image} source={item}></Image>
+          )}
+          onMomentumScrollEnd={(e) => {
+            const index = Math.round(e.nativeEvent.contentOffset.x / width);
+            setCurrentIndex(index);
+          }}
+        ></FlatList>
         <View>
           <Text style={styles.title}>Select the Favourite Menu</Text>
           <Text style={styles.subTitle}>
@@ -22,20 +60,24 @@ export default function OnboardingPage() {
             </Pressable>
           </Link>
         </View>
-      </View>
-      <View style={styles.bottom}>
-        <Text>Skip</Text>
-        <View style={styles.dot__Wrapper}>
-          <Text style={styles.dotBlur}></Text>
-          <Text style={styles.dot}></Text>
-          <Text style={styles.dotBlur}></Text>
-        </View>
-        <View>
-          <MaterialIcons
-            name="arrow-forward"
-            size={25}
-            color="rgb(89, 44, 0)"
-          />
+        <View style={styles.bottom}>
+          <View>
+            <Link href="/signup" asChild>
+              <Pressable>
+                <MaterialIcons
+                  name="arrow-back"
+                  size={25}
+                  color="rgb(89, 44, 0)"
+                />
+              </Pressable>
+            </Link>
+          </View>
+          <View style={styles.dot__Wrapper}>
+            <View style={styles.dotBlur}></View>
+            <View style={styles.dot}></View>
+            <View style={styles.dotBlur}></View>
+          </View>
+          <Text>Skip</Text>
         </View>
       </View>
     </View>
@@ -49,17 +91,19 @@ const styles = StyleSheet.create({
     alignContent: "center",
   },
   image: {
-    width: "100%",
+    width: Dimensions.get("window").width,
+    height: 300,
     resizeMode: "contain",
-    marginTop: -110,
+    marginTop: -30,
   },
   wrapper: {
     display: "flex",
     flexDirection: "column",
-    rowGap: 35,
+    rowGap: 70,
+    height: "100vh",
   },
   title: {
-    fontSize: "20px",
+    fontSize: 20,
     textAlign: "center",
     fontFamily: "arial",
     paddingVertical: "12px",
@@ -84,7 +128,7 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
     borderRadius: 6,
-    marginHorizontal: "auto",
+    alignSelf: "center",
     fontSize: 14,
     letterSpacing: 1,
     cursor: "pointer",
@@ -93,12 +137,13 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
+    paddingHorizontal: 18,
   },
   dot__Wrapper: {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    columnGap: 3,
+    columnGap: 5,
   },
   dotBlur: {
     width: 8,

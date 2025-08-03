@@ -56,6 +56,7 @@ export default function RootLayout() {
         name="onboarding1"
         options={{
           title: "",
+          headerShown: false,
           headerStyle: { backgroundColor: "white" },
           headerTintColor: "black",
           headerTitleStyle: { fontSize: 18 },
